@@ -33,6 +33,10 @@
         <textarea name="message" id="message-input" placeholder="Nhập lời nhắn của bạn..." rows="5"></textarea>
         <button id="message-btn" onClick="handleSendMessage()" disabled>Gửi cậu</button>
     </div>
+    <div id="custom-modal" class="hidden">
+        <p id="noti-text">Lời nhắn của bạn: Chúng mình yêu nhau nhé 💕</p>
+        <button onClick="handleCloseNoti()">Close</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -62,10 +62,29 @@ const handleDisagree = () => {
 
 const handleSendMessage = () => {
     document.getElementById("message-box").classList.add("hidden");
-    setTimeout(()=>{
-        alert("Lời nhắn của bạn: Chúng mình yêu nhau nhé 💕");
-        alert("Lời nhắn của bạn đã được gửi");
-    }, 300)
+
+    if(isMobile()) {
+        document.getElementById("custom-modal").classList.remove("hidden");
+
+    } else {
+        setTimeout(()=>{
+            alert("Lời nhắn của bạn: Chúng mình yêu nhau nhé 💕");
+            alert("Lời nhắn của bạn đã được gửi");
+        }, 300);
+    }   
+}
+
+let isFirstNoti = true;
+const handleCloseNoti = () => {
+    if(isFirstNoti) {
+        document.getElementById("noti-text").innerHTML = "Lời nhắn của bạn đã được gửi";
+    } else {
+        document.getElementById("custom-modal").classList.add("hidden");
+    }
+}
+
+const isMobile = () => {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
 document.getElementById("message-input").addEventListener("input", function() {
