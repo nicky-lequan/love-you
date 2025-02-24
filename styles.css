@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #fd7b97;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0;
+}
+
+p {
+    display: inline;
+    font-size: 18px;
+    font-weight: 800;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+}
+
+.greeting .subtext {
+    margin: 5px 0 10px 0;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+#letter-btn {
+   background-color: transparent;
+   box-shadow: none;
+   border: none;
+   transition: opacity 0.3s ease;
+}
+
+#letter-btn img {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+}
+
+.message-container {
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid #f19fb3;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    color: black;
+}
+
+.message-container p {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#question-container img {
+    width: 115px;
+    height: 115px;
+    margin-bottom: 28px;
+}
+
+.btn-container {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ce4f6a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ce4f6a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #d37da8;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#message-box {
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid #f19fb3;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#message-box p {
+    color: #f86f6f;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#message-box textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#message-box button {
+    width: 110px;
+}
+
+#message-box button {
+    font-size: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#message-box {
+    width: 100%;
+    margin: 20px;
+
+    @media(min-width: 1024px) {
+        width: 940px;
+    }
+}
+
+@keyframes shake{
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}

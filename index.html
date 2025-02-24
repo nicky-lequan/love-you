@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi cậu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/letter.ico">
+</head>
+<body>
+    <div id="greeting" class="container greeting">
+        <h1 class="title">Bạn có tin nhắn quan trọng</h1>
+        <p class="subtext">Xem ngay!</p>
+        <button id="letter-btn" onClick="openLetter()">
+            <img src="images/letter.png" alt="Letter" id="messageLink">
+        </button>
+    </div>
+    <div id="message-container" class="message-container hidden">
+        <p id="message">Hi cậu 😗</p>
+    </div>
+    <div id="question-container" class="hidden">
+        <div class="message-container">
+            <img src="https://i.pinimg.com/originals/dc/b9/6f/dcb96f174bb3e9615a4f7d5e9e161f14.gif" alt="Description" style="display: block;">
+            <p>Cậu đồng ý làm người yêu tớ nhaaaa 💕</p>
+        </div>
+        <div class="btn-container">
+            <button onClick="handleAgree()">Đồng ý</button>
+            <button onClick="handleDisagree()">Không</button>
+        </div>
+    </div>
+    <div id="message-box" class="hidden">
+        <p>Tớ biết mà! Viết lời nhắn của cậu vào đây:</p>
+        <textarea name="message" id="message-input" placeholder="Nhập lời nhắn của bạn..." rows="5"></textarea>
+        <button id="message-btn" onClick="handleSendMessage()" disabled>Gửi cậu</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
