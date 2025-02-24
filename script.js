@@ -65,7 +65,6 @@ const handleSendMessage = () => {
 
     if(isMobile()) {
         document.getElementById("custom-modal").classList.remove("hidden");
-
     } else {
         setTimeout(()=>{
             alert("Lời nhắn của bạn: Chúng mình yêu nhau nhé 💕");
@@ -78,6 +77,7 @@ let isFirstNoti = true;
 const handleCloseNoti = () => {
     if(isFirstNoti) {
         document.getElementById("noti-text").innerHTML = "Lời nhắn của bạn đã được gửi";
+        isFirstNoti = false;
     } else {
         document.getElementById("custom-modal").classList.add("hidden");
     }
