@@ -6,7 +6,7 @@ const shakeInterval = setInterval(() => {
 
 const firstLetterList = [
     "Đầu tiên, cảm ơn rất nhiều vì đã đọc lá thư này",
-    "Tớ có một điều muốn nói nhưng không biết bắt đầu từ đâu",
+    "Tớ có điều muốn nói nhưng không biết bắt đầu từ đâu",
     "Cậu đồng ý..."
 ];
 
